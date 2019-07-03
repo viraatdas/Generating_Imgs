@@ -36,7 +36,7 @@ def batch_norm(x, train_logical, decay, epsilon, scope=None, shift=True, scale=F
 
 		if train_logical:
 
-			m, v = tf.nn.moments(x, range(ndim - 1))
+			m, v = tf.nn.moments(x, list(range(ndim - 1)))
 			update_m = assign_decay(moving_m, m, decay, 'update_mean')
 			update_v = assign_decay(moving_v, v, decay, 'update_var')
 
