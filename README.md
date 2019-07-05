@@ -20,4 +20,3 @@ python gan_eval.py
 ```
 
 
-# Generating_Imgs
